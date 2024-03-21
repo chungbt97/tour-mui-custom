@@ -16,14 +16,19 @@ import MuiAlert from './alerts'
 import MuiAvatar from './avatars'
 
 import MuiButton from './button'
+import MuiBackdrop from './backdrop'
+import MuiBreadcrumb from './breadcrumbs'
 import MuiTypography from './typography'
 
 const Overrides = (settings: Settings) => {
-  const button = MuiButton()
-  const accordion = MuiAccordion()
   const alert = MuiAlert()
+  const accordion = MuiAccordion()
   const avatar = MuiAvatar()
-  return Object.assign(accordion, alert, avatar, button, MuiTypography)
+  const backdrop = MuiBackdrop()
+  const button = MuiButton()
+  const breadcrumb = MuiBreadcrumb()
+
+  return Object.assign(accordion, alert, avatar, backdrop, breadcrumb, button, MuiTypography)
 }
 
 console.log(Overrides)
