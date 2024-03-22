@@ -1,7 +1,15 @@
 import './App.css'
+
 import reactLogo from './assets/react.svg'
-import Breadcrumbs from './components/breadcrumbs'
 import viteLogo from '/vite.svg'
+
+// ** React Imports
+import { Fragment } from 'react'
+
+// ** React Imports
+
+// ** MUI Imports
+import { Pagination } from '@mui/material'
 
 function App() {
   return (
@@ -15,22 +23,14 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <Breadcrumbs
-        items={[
-          {
-            label: 'Home',
-            href: '/'
-          },
-          {
-            label: 'Patient',
-            href: '/patient'
-          },
-          {
-            label: 'Detail',
-            href: '/detail'
-          }
-        ]}
-      />
+
+      <Fragment>
+        <div className='demo-space-y'>
+          <Pagination count={10} />
+          <Pagination count={10} color='primary' />
+          <Pagination count={10} color='secondary' />
+        </div>
+      </Fragment>
     </>
   )
 }

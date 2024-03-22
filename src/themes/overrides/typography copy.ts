@@ -1,12 +1,9 @@
 // ** Type Import
 import { OwnerStateThemeType } from './'
 
-const typography = () => ({
+const typography = {
   MuiTypography: {
     styleOverrides: {
-      root: {
-        textAlign: 'left'
-      },
       gutterBottom: ({ theme }: OwnerStateThemeType) => ({
         marginBottom: theme.spacing(2)
       })
@@ -66,6 +63,6 @@ const typography = () => ({
       }
     ]
   }
-})
+}
 
 export default typography

@@ -24,6 +24,9 @@ const Button = () => {
             '&:hover': {
               transform: 'translateY(-1px)'
             }
+          },
+          '&:focus': {
+            outline: 'none'
           }
         }),
         contained: ({ theme }: OwnerStateThemeType) => ({
